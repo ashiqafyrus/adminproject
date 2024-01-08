@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+{% block content %}
+<h1 style="text-align: center;"><u>Teacher Details</u></h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Age</th>
+       
+        <th scope="col">Image</th>
+        <th scope="col">Contact number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for s in tkey %}
+      <tr>
+      
+        <td>{{s.user.first_name}}</td>
+        <td>{{s.address}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.image}} <img src="{{s.image.url}}" class="w-25"></td>
+        <td>{{s.number}}</td>
+        
+       
+     
+        
+        <td><a href="{% url 'delete_teacher' s.id %}">delete</a></td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "navbar.html" %}
+{% block content %}
+{% load static %}
+<form action="{% url 'profile_function' detail.id %}">
+    {% csrf_token %}
+  <div class="d-flex justify-content-center">
+<div class="card text-center" style="width: 18rem;">
+   
+   
+    
+    <div class="card-body">
+        <img src="{{detail.image.url}}" class="w-25" class="center">
+      <h3 class="card-title">{{detail.user.first_name}}<span></span>{{detail.user.last_name}}</h3></h5>
+        
+      <p class="card-text"><u>Address</u><br>{{detail.address}}</p>
+    </div>
+    <ul class="list-group list-group-flush " >
+      <li class="list-group-item"><u>Age</u><br>{{detail.age}}</li>
+      <li class="list-group-item"><u>User name</u><br>{{detail.user.username}}</li>
+      <li class="list-group-item"><u>Email</u><br>{{detail.user.email}}</li>
+      <li class="list-group-item"><u>Course</u><br>{{detail.course_name}}</li>
+      <li class="list-group-item"><u>Contact number</u><br>{{detail.phone}}</li>
+ 
+    </ul>
+    <div class="card-body">
+      <a href="{% url 'userhome' %}" class="card-link">Back</a>
+      
+    </div></div>
+  </div></form>
+  {% endblock %}

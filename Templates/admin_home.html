@@ -1,0 +1,17 @@
+{% extends "navbar.html" %}
+{% block content %}
+{% load static %}
+<a href="{% url 'add_course' %}">
+<img src="/static/images/course.jpg" width="300" height="200"></a>
+<a href="{% url 'add_student' %}">
+<img src="/static/images/student.jpg" width="300" height="200"></a>
+<a href="{% url 'show_teacher' %}">
+<img src="/static/images/teacher.jpg" width="300" height="200"></a>
+<a href="{% url 'show_student' %}">
+<img src="/static/images/studentdetail.jpg" width="300" height="200"></a>
+<a href="{% url 'logoutfunction' %}" >
+ <h1 style="text-align: center;">  <b> Logout</b></h1></a>
+
+
+
+{% endblock %}

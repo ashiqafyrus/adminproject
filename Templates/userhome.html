@@ -1,0 +1,16 @@
+{% extends "navbar.html" %}
+{% block content %}
+{% load static %}
+<a href="{% url 'edit_usermember' %}" >
+    <h1 style="text-align: center;">  <b> Edit</b></h1></a>
+  
+   <td><a href="{% url 'profile' %}" >
+    <h1 style="text-align: center;">  <b> Profile</b></h1></a></td>
+  
+    
+<a href="{% url 'logoutfunction' %}" >
+ <h1 style="text-align: center;">  <b> Logout</b></h1></a>
+
+
+
+{% endblock %}

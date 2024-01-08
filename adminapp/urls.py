@@ -1,0 +1,27 @@
+from django.urls import path,include
+from .import views
+urlpatterns = [
+   path('',views.index,name='index'),
+   path('loginpage',views.loginpage,name='loginpage'),
+    path('log',views.log,name='log'),
+    path('add_course',views.add_course,name='add_course'),
+     path('admin_home',views.admin_home,name='admin_home'),
+      path('userhome',views.userhome,name='userhome'),
+     path('addcourse',views.addcourse,name='addcourse'),
+     path('add_student',views.add_student,name='add_student'),
+    path('add_teacher',views.add_teacher,name='add_teacher'),
+    path('logoutfunction',views.logoutfunction,name='logoutfunction'),
+  path('add_studentdetails',views.add_studentdetails,name='add_studentdetails'),  
+   path('add_teacherdetails',views.add_teacherdetails,name='add_teacherdetails'),  
+  path('show_student',views.show_student,name='show_student'), 
+  path('show_teacher',views.show_teacher,name='show_teacher'),
+  path('show_usermember',views.show_usermember,name='show_usermember'), 
+  path('edit_student/<int:pk>',views.edit_student,name='edit_student'),  
+  path('edit_usermember',views.edit_usermember,name='edit_usermember'),  
+  path('edit_studentdetails/<int:pk>',views.edit_studentdetails,name='edit_studentdetails'), 
+  path('edit_teacher',views.edit_teacher,name='edit_teacher'),  
+  path('delete_student/<int:pk>',views.delete_student,name='delete_student'), 
+  path('delete_teacher/<int:pk>',views.delete_teacher,name='delete_teacher'), 
+  path('profile',views.profile,name='profile'),
+  path('profile_function/<int:pk>',views.profile_function,name='profile_function'), 
+   ]

@@ -1,0 +1,36 @@
+{% extends "nav2.html" %}
+{% block content %}
+<div class="container">
+  
+</div>
+
+    <section class="vh-100" >
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+                <h3 class="mb-5" style="color: rgb(171, 22, 114);;">Login</h3>
+                <form method="post" action="{% url 'log' %}">
+                    {% csrf_token %}  
+                <div class="form-outline mb-4">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+      
+    </div>
+    <div class="form-outline mb-4">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+    </div>
+  
+  
+    <button type="submit" class="btn btn-primary" style="background-color: rgb(171, 22, 114);">submit</button>
+  </form>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

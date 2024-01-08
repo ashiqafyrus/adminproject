@@ -1,0 +1,42 @@
+{% extends "navbar.html" %}
+{% block content %}
+<h1 style="text-align: center;"><u>Student Details</u></h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Student name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Age</th>
+        <th scope="col">Joining date</th>
+        <th scope="col">Course</th>
+        <th scope="col">Course fee</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for s in skey %}
+      <tr>
+      
+        <td>{{s.student_name}}</td>
+        <td>{{s.student_address}}</td>
+        <td>{{s.student_age}}</td>
+      
+        <td>{{s.joining_date}}</td>
+        <td>{{s.c.course_name}}</td>
+        <td>{{s.c.fee}}</td>
+     
+        <td><a href="{% url 'edit_student' s.id %}">edit</a></td>
+        <td><a href="{% url 'delete_student' s.id %}">delete</a></td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="text-center">               
+<a role="button" class="btn  "  href="{% url 'admin_home' %}">
+    Admin Home</a>
+    <a role="button" class="btn  "  href="{% url 'logoutfunction' %}">
+      Logout</a>
+    </div>  
+{% endblock %}
